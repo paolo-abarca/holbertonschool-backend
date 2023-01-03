@@ -32,7 +32,7 @@ def hello_world() -> Any:
     “Welcome to Holberton” as page title (<title>) and
     “Hello world” as header (<h1>)
     """
-    return render_template("1-index.html")
+    return render_template("3-index.html")
 
 
 @babel.localeselector
