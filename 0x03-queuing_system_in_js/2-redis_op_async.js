@@ -1,6 +1,6 @@
 import { createClient } from 'redis';
 import { print } from 'redis';
-const { promisify } = require('util');
+import { promisify } from 'util';
 
 const client = createClient();
 const get_values = promisify(client.get).bind(client);
