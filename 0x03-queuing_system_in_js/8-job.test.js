@@ -27,6 +27,16 @@ describe('createPushNotificationsJobs', () => {
   });
 
   it("...", () => {
+    const job = {
+      phoneNumber: '4153518781',
+      message: 'This is the code 1234 to verify your account',
+    };
+    expect(() => {
+      createPushNotificationsJobs(job, queue);
+    }).to.throw(Error, 'Jobs is not an array');
+  });
+
+  it("...", () => {
     expect(() => {
       createPushNotificationsJobs(2, queue);
     }).to.throw("Jobs is not an array");
